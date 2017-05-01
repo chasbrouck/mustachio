@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Calendar View-->
         <scene sceneID="BLn-Ef-VaR">
@@ -39,13 +45,83 @@
                     <view key="view" contentMode="scaleToFill" id="Fwp-jw-8gU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addBig" translatesAutoresizingMaskIntoConstraints="NO" id="Vgi-2J-wWv">
+                                <rect key="frame" x="0.0" y="-23" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="R6s-KI-0dw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month ## - Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjM-cJ-Qdr">
+                                <rect key="frame" x="16" y="235" width="208.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
+                                <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yp-Re-irs">
+                                <rect key="frame" x="16" y="284" width="77" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcp-Xy-EdS">
+                                <rect key="frame" x="16" y="335.5" width="118" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bdb-T2-4ey">
+                                <rect key="frame" x="16" y="381" width="343" height="156"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kcp-KE-4pc">
+                                <rect key="frame" x="101" y="285" width="258" height="24"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="2rZ-zU-keN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O0-ta-WU3">
+                                <rect key="frame" x="20" y="554" width="334" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2oS-EJ-Dcb"/>
+                                    <constraint firstAttribute="width" constant="334" id="fEy-bq-khb"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="saveEntry"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bdb-T2-4ey" firstAttribute="leading" secondItem="Fwp-jw-8gU" secondAttribute="leadingMargin" id="194-zX-aWH"/>
+                            <constraint firstItem="3O0-ta-WU3" firstAttribute="centerX" secondItem="Fwp-jw-8gU" secondAttribute="centerX" id="AkK-5J-rrK"/>
+                            <constraint firstItem="Kcp-KE-4pc" firstAttribute="leading" secondItem="1yp-Re-irs" secondAttribute="trailing" constant="8" id="B33-ym-TJf"/>
+                            <constraint firstItem="Bdb-T2-4ey" firstAttribute="trailing" secondItem="Fwp-jw-8gU" secondAttribute="trailingMargin" id="CRu-AR-dS0"/>
+                            <constraint firstItem="Vgi-2J-wWv" firstAttribute="centerX" secondItem="Fwp-jw-8gU" secondAttribute="centerX" id="F8w-n0-kLQ"/>
+                            <constraint firstItem="Bdb-T2-4ey" firstAttribute="top" secondItem="dcp-Xy-EdS" secondAttribute="bottom" constant="21" id="KUn-y8-abv"/>
+                            <constraint firstItem="Kcp-KE-4pc" firstAttribute="top" secondItem="vjM-cJ-Qdr" secondAttribute="bottom" constant="19.5" id="MtF-Zk-1Pj"/>
+                            <constraint firstItem="dcp-Xy-EdS" firstAttribute="leading" secondItem="Fwp-jw-8gU" secondAttribute="leadingMargin" id="VNt-Cf-BPh"/>
+                            <constraint firstItem="dcp-Xy-EdS" firstAttribute="top" secondItem="1yp-Re-irs" secondAttribute="bottom" constant="27" id="WWf-Pa-eWk"/>
+                            <constraint firstItem="vjM-cJ-Qdr" firstAttribute="leading" secondItem="Fwp-jw-8gU" secondAttribute="leadingMargin" id="aTo-m9-SmP"/>
+                            <constraint firstItem="Vgi-2J-wWv" firstAttribute="top" secondItem="ZZA-Wf-d1x" secondAttribute="bottom" constant="-43" id="b23-bC-ZBs"/>
+                            <constraint firstAttribute="trailing" secondItem="Vgi-2J-wWv" secondAttribute="trailing" id="ey2-Tm-aeh"/>
+                            <constraint firstItem="1yp-Re-irs" firstAttribute="top" secondItem="vjM-cJ-Qdr" secondAttribute="bottom" constant="18.5" id="gQe-PP-2yl"/>
+                            <constraint firstItem="6K3-S1-7wZ" firstAttribute="top" secondItem="3O0-ta-WU3" secondAttribute="bottom" constant="20" id="ipS-We-Qp0"/>
+                            <constraint firstItem="Kcp-KE-4pc" firstAttribute="trailing" secondItem="Fwp-jw-8gU" secondAttribute="trailingMargin" id="pyA-wE-Jet"/>
+                            <constraint firstItem="Vgi-2J-wWv" firstAttribute="leading" secondItem="Fwp-jw-8gU" secondAttribute="leading" id="tQY-rN-bBM"/>
+                            <constraint firstItem="vjM-cJ-Qdr" firstAttribute="top" secondItem="Vgi-2J-wWv" secondAttribute="bottom" constant="8" id="u60-BT-pC4"/>
+                            <constraint firstItem="3O0-ta-WU3" firstAttribute="top" secondItem="Bdb-T2-4ey" secondAttribute="bottom" constant="17" id="uYh-7y-Iys"/>
+                            <constraint firstItem="1yp-Re-irs" firstAttribute="leading" secondItem="Fwp-jw-8gU" secondAttribute="leadingMargin" id="xs1-YM-0ZA"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="plus" id="ZfS-cv-gZi"/>
+                    <tabBarItem key="tabBarItem" title="Entry" image="plus" id="ZfS-cv-gZi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNP-PQ-ym2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="-661"/>
+            <point key="canvasLocation" x="980" y="-661.61919040479768"/>
         </scene>
         <!--Journal View-->
         <scene sceneID="Zqr-pw-gJu">
@@ -55,12 +131,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Hiu-zr-1Dx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PrV-Wv-Uhx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PrV-Wv-Uhx" id="a4V-f7-h0d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -76,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="980" y="159"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Ef2-cO-DWw">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Lnb-a7-hoY" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Lnb-a7-hoY" customClass="TabBarViewController" customModule="mustachio" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="He5-qi-IC3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -99,8 +180,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addBig" width="375" height="208"/>
         <image name="camera" width="25" height="25"/>
         <image name="journa" width="23" height="23"/>
         <image name="plus" width="25" height="25"/>
+        <image name="saveEntry" width="628" height="88"/>
     </resources>
 </document>

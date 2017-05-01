@@ -12,6 +12,9 @@
 		1343FB0B1EB67454007BF9EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1343FB091EB67454007BF9EA /* Main.storyboard */; };
 		1343FB0D1EB67454007BF9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1343FB0C1EB67454007BF9EA /* Assets.xcassets */; };
 		1343FB101EB67454007BF9EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1343FB0E1EB67454007BF9EA /* LaunchScreen.storyboard */; };
+		13EA796C1EB7928D009E089C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA796B1EB7928D009E089C /* TabBarViewController.swift */; };
+		13EA79701EB79583009E089C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13EA796E1EB79583009E089C /* Montserrat-Bold.ttf */; };
+		13EA79711EB79583009E089C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13EA796F1EB79583009E089C /* Montserrat-Regular.ttf */; };
 		F81B24761EB6832800EF2BCE /* JournalTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B24751EB6832800EF2BCE /* JournalTableVC.swift */; };
 		F81B24781EB6834D00EF2BCE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B24771EB6834D00EF2BCE /* UserData.swift */; };
 		F81B247C1EB6839200EF2BCE /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B247B1EB6839200EF2BCE /* JournalEntry.swift */; };
@@ -25,6 +28,9 @@
 		1343FB0C1EB67454007BF9EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1343FB0F1EB67454007BF9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1343FB111EB67454007BF9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13EA796B1EB7928D009E089C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Mustachio/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
+		13EA796E1EB79583009E089C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		13EA796F1EB79583009E089C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		F81B24751EB6832800EF2BCE /* JournalTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalTableVC.swift; path = Mustachio/JournalTableVC.swift; sourceTree = SOURCE_ROOT; };
 		F81B24771EB6834D00EF2BCE /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		F81B247B1EB6839200EF2BCE /* JournalEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
@@ -64,11 +70,22 @@
 				F81B247A1EB6835900EF2BCE /* VC */,
 				F81B24791EB6835100EF2BCE /* Model */,
 				1343FB091EB67454007BF9EA /* Main.storyboard */,
+				13EA796B1EB7928D009E089C /* TabBarViewController.swift */,
 				1343FB0C1EB67454007BF9EA /* Assets.xcassets */,
 				1343FB0E1EB67454007BF9EA /* LaunchScreen.storyboard */,
 				1343FB111EB67454007BF9EA /* Info.plist */,
+				13EA796D1EB79567009E089C /* Fonts */,
 			);
 			path = mustachio;
+			sourceTree = "<group>";
+		};
+		13EA796D1EB79567009E089C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				13EA796E1EB79583009E089C /* Montserrat-Bold.ttf */,
+				13EA796F1EB79583009E089C /* Montserrat-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		F81B24791EB6835100EF2BCE /* Model */ = {
@@ -149,8 +166,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13EA79701EB79583009E089C /* Montserrat-Bold.ttf in Resources */,
 				1343FB101EB67454007BF9EA /* LaunchScreen.storyboard in Resources */,
 				1343FB0D1EB67454007BF9EA /* Assets.xcassets in Resources */,
+				13EA79711EB79583009E089C /* Montserrat-Regular.ttf in Resources */,
 				1343FB0B1EB67454007BF9EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +185,7 @@
 				1343FB061EB67454007BF9EA /* AppDelegate.swift in Sources */,
 				F81B247C1EB6839200EF2BCE /* JournalEntry.swift in Sources */,
 				F81B24781EB6834D00EF2BCE /* UserData.swift in Sources */,
+				13EA796C1EB7928D009E089C /* TabBarViewController.swift in Sources */,
 				F81B24761EB6832800EF2BCE /* JournalTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
