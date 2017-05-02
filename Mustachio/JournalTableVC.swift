@@ -17,6 +17,21 @@ class JournalTableVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //deleting and loading journalEntries
+        print("Deleting and loading Favorites")
+        UserData.shared.totalJournalEntries.removeAll()
+        print("Favorites=\(UserData.shared.totalJournalEntries)")
+        
+        //reload all the favorites from disk
+        let pathToFile = FileManager.filePathInDocumentsDirectory(fileName: "allEntries.archive")
+        //make sure the file exists before loading it
+        if FileManager.default.fileExists(atPath: pathToFile.path){
+            UserData.shared.totalJournalEntries = NSKeyedUnarchiver.unarchiveObject(withFile: pathToFile.path) as! [JournalEntry]
+            print("Journal Entries=\(UserData.shared.totalJournalEntries)")
+        }else{
+            print("could not find allEntries.archive")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,19 +54,25 @@ class JournalTableVC: UITableViewController {
     //want to reload the TableView everytime it appears again - usually after adding a new journal entry
     override func viewDidAppear(_ animated: Bool) {
         //reload the data here
-        
+        super.viewDidAppear(true)
+        self.tableView.reloadData()
         //consider making it so that data is only reloaded if the count of journalEntries has changed
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        if UserData.shared.totalJournalEntries.count > 0{
+            let entry = UserData.shared.totalJournalEntries[indexPath.row]
+            let title = entry.journalDate
+            cell.textLabel?.text = title
+        }
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

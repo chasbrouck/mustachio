@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
         <!--New Item View-->
         <scene sceneID="B4P-74-gPL">
             <objects>
-                <viewController id="6q8-BM-BCp" userLabel="New Item View" sceneMemberID="viewController">
+                <viewController id="6q8-BM-BCp" userLabel="New Item View" customClass="NewEntryVC" customModule="mustachio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZZA-Wf-d1x"/>
                         <viewControllerLayoutGuide type="bottom" id="6K3-S1-7wZ"/>
@@ -92,6 +92,9 @@
                                     <constraint firstAttribute="width" constant="334" id="fEy-bq-khb"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="saveEntry"/>
+                                <connections>
+                                    <action selector="saveEntry:" destination="6q8-BM-BCp" eventType="touchUpInside" id="snC-Np-1i0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,6 +121,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Entry" image="plus" id="ZfS-cv-gZi"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="vjM-cJ-Qdr" id="rdY-54-apo"/>
+                        <outlet property="descriptionTextView" destination="Bdb-T2-4ey" id="53Q-sM-Nqm"/>
+                        <outlet property="lengthTextView" destination="Kcp-KE-4pc" id="icq-Vy-deO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNP-PQ-ym2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,11 +145,11 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PrV-Wv-Uhx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="PrV-Wv-Uhx">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PrV-Wv-Uhx" id="a4V-f7-h0d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

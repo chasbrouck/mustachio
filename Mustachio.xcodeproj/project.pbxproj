@@ -18,6 +18,8 @@
 		F81B24761EB6832800EF2BCE /* JournalTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B24751EB6832800EF2BCE /* JournalTableVC.swift */; };
 		F81B24781EB6834D00EF2BCE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B24771EB6834D00EF2BCE /* UserData.swift */; };
 		F81B247C1EB6839200EF2BCE /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B247B1EB6839200EF2BCE /* JournalEntry.swift */; };
+		F87614DC1EB802A400009ED2 /* NewEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87614DB1EB802A400009ED2 /* NewEntryVC.swift */; };
+		F87614DE1EB80AA600009ED2 /* MyFileFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87614DD1EB80AA600009ED2 /* MyFileFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F81B24751EB6832800EF2BCE /* JournalTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalTableVC.swift; path = Mustachio/JournalTableVC.swift; sourceTree = SOURCE_ROOT; };
 		F81B24771EB6834D00EF2BCE /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		F81B247B1EB6839200EF2BCE /* JournalEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		F87614DB1EB802A400009ED2 /* NewEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewEntryVC.swift; path = ../NewEntryVC.swift; sourceTree = "<group>"; };
+		F87614DD1EB80AA600009ED2 /* MyFileFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFileFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				F81B247A1EB6835900EF2BCE /* VC */,
 				F81B24791EB6835100EF2BCE /* Model */,
 				1343FB091EB67454007BF9EA /* Main.storyboard */,
+				F87614DD1EB80AA600009ED2 /* MyFileFunctions.swift */,
 				13EA796B1EB7928D009E089C /* TabBarViewController.swift */,
 				1343FB0C1EB67454007BF9EA /* Assets.xcassets */,
 				1343FB0E1EB67454007BF9EA /* LaunchScreen.storyboard */,
@@ -100,6 +105,7 @@
 		F81B247A1EB6835900EF2BCE /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				F87614DB1EB802A400009ED2 /* NewEntryVC.swift */,
 				1343FB071EB67454007BF9EA /* ViewController.swift */,
 				F81B24751EB6832800EF2BCE /* JournalTableVC.swift */,
 			);
@@ -185,8 +191,10 @@
 				1343FB061EB67454007BF9EA /* AppDelegate.swift in Sources */,
 				F81B247C1EB6839200EF2BCE /* JournalEntry.swift in Sources */,
 				F81B24781EB6834D00EF2BCE /* UserData.swift in Sources */,
+				F87614DC1EB802A400009ED2 /* NewEntryVC.swift in Sources */,
 				13EA796C1EB7928D009E089C /* TabBarViewController.swift in Sources */,
 				F81B24761EB6832800EF2BCE /* JournalTableVC.swift in Sources */,
+				F87614DE1EB80AA600009ED2 /* MyFileFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

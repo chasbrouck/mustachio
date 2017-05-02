@@ -10,50 +10,61 @@ import Foundation
 import UIKit
 
 //class that contains all the info present in a journal entry
-class JournalEntry{
-    private var description:String? //stores description
-    private var hairLength:Double? //stores hairLength
+class JournalEntry: NSObject, NSCoding{
+    private var entryDescription:String //stores description
+    private var hairLength:Double //stores hairLength
     private var image:UIImage? //stores documentary photograph
-    private var date:Date? //stores the date the entry was created
     
-    private var day:String?
-    private var month:String?
-    private var year:String?
+    private var day:String
+    private var month:String
+    private var year:String
     
-    private var concatenatedDate:String?
+    private var concatenatedDate:String
     
     //constructor
-    init(description:String, hairLength:Double, image:UIImage){
-        self.description = description
+    init(description:String, hairLength:Double)/*, image:UIImage)*/{
+        self.entryDescription = description
         self.hairLength = hairLength
-        self.image = image
-        self.date = Date()
-        //get and parse the date from the calendar
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month, .day], from: self.date!)
+        //self.image = image
         
-        self.year = String(components.year!)
-        self.month = determineMonth(month: components.month!)
-        self.day = String(components.day!)
+        let date = UserData.shared.getDate()
         
-        self.concatenatedDate = "\(self.month!) \(self.day!) - \(self.year!)"
-        
-        UserData.shared.totalJournalEntries.append(self)
+        self.year = date[0]
+        self.month = date[1]
+        self.day = date[2]
+        self.concatenatedDate = date[3]
+    }
+    
+    required public init(coder aDecoder:NSCoder){
+        self.entryDescription = aDecoder.decodeObject(forKey: "entryDescription") as! String
+        self.hairLength = aDecoder.decodeDouble(forKey: "hairLength")
+        //self.image = aDecoder.decodeObject(forKey: "image")
+        self.day = aDecoder.decodeObject(forKey: "day") as! String
+        self.month = aDecoder.decodeObject(forKey: "month") as! String
+        self.year = aDecoder.decodeObject(forKey: "year") as! String
+        self.concatenatedDate = aDecoder.decodeObject(forKey: "totalDate") as! String
+        print("encode with coder called on \(concatenatedDate)")
+    }
+    
+    //MARK: - Methods that are required by NSCoding protocol
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(entryDescription, forKey: "entryDescription")
+        aCoder.encode(hairLength, forKey: "hairLength")
+        //aCoder.encode(image, forKey: "image")
+        aCoder.encode(day, forKey: "day")
+        aCoder.encode(month, forKey: "month")
+        aCoder.encode(year, forKey: "year")
+        aCoder.encode(concatenatedDate, forKey: "totalDate")
     }
     
     // MARK - Getters and Setters
-    var journalDescription: String{
-        get{
-            return description ?? ""
-        }
-        set(newDescription){
-            description = newDescription
-        }
+    var journalDescription: String?{
+        return entryDescription
     }
     
     var journalHairLength: Double{
         get{
-            return hairLength ?? 0.0
+            return hairLength ?? -1.0
         }
         set(newLength){
             hairLength = newLength
@@ -69,43 +80,10 @@ class JournalEntry{
         }
     }
     
+    var journalDate: String{
+        return concatenatedDate
+    }
+    
     // MARK - Helper Methods
     
-    //handling dates in swift is bad - only returns Ints
-    //for our purposes we need the app to display the month name
-    //this method determines what month it is and returns it
-    func determineMonth(month:Int)->String{
-        var mon = ""
-        
-        switch(month){
-        case 1: mon = "January"
-            break
-        case 2: mon = "February"
-            break
-        case 3: mon = "March"
-            break
-        case 4: mon = "April"
-            break
-        case 5: mon = "May"
-            break
-        case 6: mon = "June"
-            break
-        case 7: mon = "July"
-            break
-        case 8: mon = "August"
-            break
-        case 9: mon = "September"
-            break
-        case 10: mon = "October"
-            break
-        case 11: mon = "November"
-            break
-        case 12: mon = "December"
-            break
-        default: mon = "no date"
-            break
-        }
-        
-        return mon
-    }
 }
