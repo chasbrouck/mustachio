@@ -13,7 +13,7 @@ import UIKit
 class JournalEntry: NSObject, NSCoding{
     private var entryDescription:String //stores description
     private var hairLength:Double //stores hairLength
-    private var image:UIImage? //stores documentary photograph
+    private var image:UIImage //stores documentary photograph
     
     private var day:String
     private var month:String
@@ -22,10 +22,10 @@ class JournalEntry: NSObject, NSCoding{
     private var concatenatedDate:String
     
     //constructor
-    init(description:String, hairLength:Double)/*, image:UIImage)*/{
+    init(description:String, hairLength:Double, image:UIImage){
         self.entryDescription = description
         self.hairLength = hairLength
-        //self.image = image
+        self.image = image
         
         let date = UserData.shared.getDate()
         
@@ -38,7 +38,7 @@ class JournalEntry: NSObject, NSCoding{
     required public init(coder aDecoder:NSCoder){
         self.entryDescription = aDecoder.decodeObject(forKey: "entryDescription") as! String
         self.hairLength = aDecoder.decodeDouble(forKey: "hairLength")
-        //self.image = aDecoder.decodeObject(forKey: "image")
+        self.image = aDecoder.decodeObject(forKey: "image") as! UIImage!
         self.day = aDecoder.decodeObject(forKey: "day") as! String
         self.month = aDecoder.decodeObject(forKey: "month") as! String
         self.year = aDecoder.decodeObject(forKey: "year") as! String
@@ -50,7 +50,7 @@ class JournalEntry: NSObject, NSCoding{
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(entryDescription, forKey: "entryDescription")
         aCoder.encode(hairLength, forKey: "hairLength")
-        //aCoder.encode(image, forKey: "image")
+        aCoder.encode(image, forKey: "image")
         aCoder.encode(day, forKey: "day")
         aCoder.encode(month, forKey: "month")
         aCoder.encode(year, forKey: "year")
@@ -64,7 +64,7 @@ class JournalEntry: NSObject, NSCoding{
     
     var journalHairLength: Double{
         get{
-            return hairLength ?? -1.0
+            return hairLength
         }
         set(newLength){
             hairLength = newLength
@@ -73,7 +73,7 @@ class JournalEntry: NSObject, NSCoding{
     
     var journalImage: UIImage{
         get{
-            return image!
+            return image
         }
         set(newImage){
             image = newImage

@@ -73,11 +73,9 @@
 				1343FB051EB67454007BF9EA /* AppDelegate.swift */,
 				F81B247A1EB6835900EF2BCE /* VC */,
 				F81B24791EB6835100EF2BCE /* Model */,
-				1343FB091EB67454007BF9EA /* Main.storyboard */,
-				F87614DD1EB80AA600009ED2 /* MyFileFunctions.swift */,
-				13EA796B1EB7928D009E089C /* TabBarViewController.swift */,
+				F878F55B1EBAB13100532A61 /* Storyboards */,
+				F878F55A1EBAB11C00532A61 /* Lib */,
 				1343FB0C1EB67454007BF9EA /* Assets.xcassets */,
-				1343FB0E1EB67454007BF9EA /* LaunchScreen.storyboard */,
 				1343FB111EB67454007BF9EA /* Info.plist */,
 				13EA796D1EB79567009E089C /* Fonts */,
 			);
@@ -108,8 +106,26 @@
 				F87614DB1EB802A400009ED2 /* NewEntryVC.swift */,
 				1343FB071EB67454007BF9EA /* ViewController.swift */,
 				F81B24751EB6832800EF2BCE /* JournalTableVC.swift */,
+				13EA796B1EB7928D009E089C /* TabBarViewController.swift */,
 			);
 			name = VC;
+			sourceTree = "<group>";
+		};
+		F878F55A1EBAB11C00532A61 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F87614DD1EB80AA600009ED2 /* MyFileFunctions.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		F878F55B1EBAB13100532A61 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1343FB091EB67454007BF9EA /* Main.storyboard */,
+				1343FB0E1EB67454007BF9EA /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

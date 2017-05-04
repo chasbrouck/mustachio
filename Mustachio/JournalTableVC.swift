@@ -19,7 +19,7 @@ class JournalTableVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         //deleting and loading journalEntries
-        print("Deleting and loading Favorites")
+        print("Deleting and loading Journal Entries")
         UserData.shared.totalJournalEntries.removeAll()
         print("Favorites=\(UserData.shared.totalJournalEntries)")
         

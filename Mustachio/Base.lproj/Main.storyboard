@@ -96,6 +96,10 @@
                                     <action selector="saveEntry:" destination="6q8-BM-BCp" eventType="touchUpInside" id="snC-Np-1i0"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yLp-cU-iJd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -124,6 +128,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="vjM-cJ-Qdr" id="rdY-54-apo"/>
                         <outlet property="descriptionTextView" destination="Bdb-T2-4ey" id="53Q-sM-Nqm"/>
+                        <outlet property="entryImage" destination="yLp-cU-iJd" id="eyt-BN-lwa"/>
                         <outlet property="lengthTextView" destination="Kcp-KE-4pc" id="icq-Vy-deO"/>
                     </connections>
                 </viewController>
