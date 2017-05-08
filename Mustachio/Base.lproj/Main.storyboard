@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,8 +96,8 @@
                                     <action selector="saveEntry:" destination="6q8-BM-BCp" eventType="touchUpInside" id="snC-Np-1i0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yLp-cU-iJd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yLp-cU-iJd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="187"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -136,6 +136,60 @@
             </objects>
             <point key="canvasLocation" x="980" y="-661.61919040479768"/>
         </scene>
+        <!--Calendar View-->
+        <scene sceneID="7J9-9Q-sPW">
+            <objects>
+                <collectionViewController id="7H2-JN-qCS" userLabel="Calendar View" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u48-WA-oLs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GP9-hj-GOh">
+                            <size key="itemSize" width="111" height="110"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Lj4-MA-cRU">
+                                <rect key="frame" x="0.0" y="0.0" width="111" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="111" height="110"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="gAn-GU-0Ri">
+                                            <rect key="frame" x="0.0" y="0.0" width="111" height="110"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="May" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-wf-Y1h">
+                                            <rect key="frame" x="17" y="35" width="77" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8th" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxI-k0-Qdb">
+                                            <rect key="frame" x="17" y="55" width="77" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="7H2-JN-qCS" id="z7U-JE-xFz"/>
+                            <outlet property="delegate" destination="7H2-JN-qCS" id="cgi-gl-dMV"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJk-zV-ttY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-654.42278860569718"/>
+        </scene>
         <!--Journal View-->
         <scene sceneID="Zqr-pw-gJu">
             <objects>
@@ -154,7 +208,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PrV-Wv-Uhx" id="a4V-f7-h0d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -191,10 +245,114 @@
             </objects>
             <point key="canvasLocation" x="98" y="-662"/>
         </scene>
+        <!--Entry View-->
+        <scene sceneID="FPc-Zb-YGw">
+            <objects>
+                <viewController id="Ent-7z-qR5" userLabel="Entry View" customClass="NewEntryVC" customModule="mustachio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2sj-62-6G8"/>
+                        <viewControllerLayoutGuide type="bottom" id="ed8-Rt-aOq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5tl-NR-HiC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Nat-rI-YHp">
+                                <rect key="frame" x="0.0" y="-23" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Y2t-JV-zcb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month ## - Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nha-Ac-PDb">
+                                <rect key="frame" x="16" y="235" width="208.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-2c-SO5">
+                                <rect key="frame" x="16" y="284" width="77" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk2-rt-u38">
+                                <rect key="frame" x="16" y="335.5" width="118" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B56-Sn-MyX">
+                                <rect key="frame" x="16" y="381" width="343" height="205"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lgB-lr-jVD">
+                                <rect key="frame" x="101" y="285" width="258" height="24"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="PCD-Vi-8ky"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6B-1Q-Gpd">
+                                <rect key="frame" x="20" y="603" width="334" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="PYt-cd-eFf"/>
+                                    <constraint firstAttribute="height" constant="44" id="xoP-ZB-FRC"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="editEntry"/>
+                                <connections>
+                                    <action selector="saveEntry:" destination="Ent-7z-qR5" eventType="touchUpInside" id="TLe-9d-iot"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-hS-5Zg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nha-Ac-PDb" firstAttribute="top" secondItem="Nat-rI-YHp" secondAttribute="bottom" constant="8" id="3Q6-gE-vIk"/>
+                            <constraint firstItem="B56-Sn-MyX" firstAttribute="leading" secondItem="5tl-NR-HiC" secondAttribute="leadingMargin" id="603-UM-eT3"/>
+                            <constraint firstItem="ed8-Rt-aOq" firstAttribute="top" secondItem="j6B-1Q-Gpd" secondAttribute="bottom" constant="20" id="8ky-uJ-RE5"/>
+                            <constraint firstItem="B56-Sn-MyX" firstAttribute="trailing" secondItem="5tl-NR-HiC" secondAttribute="trailingMargin" id="91H-wV-x4z"/>
+                            <constraint firstItem="Nat-rI-YHp" firstAttribute="leading" secondItem="5tl-NR-HiC" secondAttribute="leading" id="OXl-qR-Jqb"/>
+                            <constraint firstItem="QNz-2c-SO5" firstAttribute="top" secondItem="Nha-Ac-PDb" secondAttribute="bottom" constant="18.5" id="Pf6-Pg-eFZ"/>
+                            <constraint firstItem="lgB-lr-jVD" firstAttribute="trailing" secondItem="5tl-NR-HiC" secondAttribute="trailingMargin" id="S9Z-xd-dGW"/>
+                            <constraint firstItem="lgB-lr-jVD" firstAttribute="leading" secondItem="QNz-2c-SO5" secondAttribute="trailing" constant="8" id="aMp-zr-0t1"/>
+                            <constraint firstAttribute="trailing" secondItem="Nat-rI-YHp" secondAttribute="trailing" id="at1-rj-vIr"/>
+                            <constraint firstItem="lgB-lr-jVD" firstAttribute="top" secondItem="Nha-Ac-PDb" secondAttribute="bottom" constant="19.5" id="e3l-f3-bqf"/>
+                            <constraint firstItem="Tk2-rt-u38" firstAttribute="top" secondItem="QNz-2c-SO5" secondAttribute="bottom" constant="27" id="g7P-za-gvn"/>
+                            <constraint firstItem="Nat-rI-YHp" firstAttribute="centerX" secondItem="5tl-NR-HiC" secondAttribute="centerX" id="hdg-ud-Ntg"/>
+                            <constraint firstItem="Tk2-rt-u38" firstAttribute="leading" secondItem="5tl-NR-HiC" secondAttribute="leadingMargin" id="lOB-Ps-Ufs"/>
+                            <constraint firstItem="Nat-rI-YHp" firstAttribute="top" secondItem="2sj-62-6G8" secondAttribute="bottom" constant="-43" id="oJE-6q-wy7"/>
+                            <constraint firstItem="QNz-2c-SO5" firstAttribute="leading" secondItem="5tl-NR-HiC" secondAttribute="leadingMargin" id="ocG-M8-v5q"/>
+                            <constraint firstItem="Nha-Ac-PDb" firstAttribute="leading" secondItem="5tl-NR-HiC" secondAttribute="leadingMargin" id="qZQ-Ez-I1P"/>
+                            <constraint firstItem="j6B-1Q-Gpd" firstAttribute="centerX" secondItem="5tl-NR-HiC" secondAttribute="centerX" id="tBb-9G-nMa"/>
+                            <constraint firstItem="B56-Sn-MyX" firstAttribute="top" secondItem="Tk2-rt-u38" secondAttribute="bottom" constant="21" id="tOc-mz-Wfs"/>
+                            <constraint firstItem="j6B-1Q-Gpd" firstAttribute="top" secondItem="B56-Sn-MyX" secondAttribute="bottom" constant="17" id="uJB-zS-rD7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Entry" image="plus" id="KX7-7U-8CF"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="Nha-Ac-PDb" id="Sm5-ab-ItF"/>
+                        <outlet property="descriptionTextView" destination="B56-Sn-MyX" id="36w-04-iOY"/>
+                        <outlet property="entryImage" destination="rSk-hS-5Zg" id="VnF-99-H9I"/>
+                        <outlet property="lengthTextView" destination="lgB-lr-jVD" id="8Lp-O8-M8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUm-lx-h7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="159"/>
+        </scene>
     </scenes>
     <resources>
         <image name="addBig" width="375" height="208"/>
+        <image name="background" width="375" height="208"/>
         <image name="camera" width="25" height="25"/>
+        <image name="editEntry" width="628" height="88"/>
         <image name="journa" width="23" height="23"/>
         <image name="plus" width="25" height="25"/>
         <image name="saveEntry" width="628" height="88"/>
