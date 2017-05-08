@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lnb-a7-hoY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,25 +59,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yp-Re-irs">
-                                <rect key="frame" x="16" y="284" width="77" height="24.5"/>
+                                <rect key="frame" x="16" y="284.5" width="77" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcp-Xy-EdS">
-                                <rect key="frame" x="16" y="335.5" width="118" height="24.5"/>
+                                <rect key="frame" x="16" y="336" width="118" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bdb-T2-4ey">
-                                <rect key="frame" x="16" y="381" width="343" height="156"/>
+                                <rect key="frame" x="16" y="381.5" width="343" height="155.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kcp-KE-4pc">
-                                <rect key="frame" x="101" y="285" width="258" height="24"/>
+                                <rect key="frame" x="101" y="285.5" width="258" height="24"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="2rZ-zU-keN"/>
@@ -140,7 +140,7 @@
         <scene sceneID="7J9-9Q-sPW">
             <objects>
                 <collectionViewController id="7H2-JN-qCS" userLabel="Calendar View" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u48-WA-oLs">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="u48-WA-oLs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,18 +199,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Hiu-zr-1Dx">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="PrV-Wv-Uhx">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="JournalCell" rowHeight="90" id="PrV-Wv-Uhx" customClass="JournalCell" customModule="mustachio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PrV-Wv-Uhx" id="a4V-f7-h0d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-lF-2e3">
+                                            <rect key="frame" x="83" y="-8" width="209" height="89"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-MJ-VvR">
+                                            <rect key="frame" x="300" y="8" width="50" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-kC-h3s">
+                                            <rect key="frame" x="310" y="44" width="30" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="auF-pt-WIv">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="89"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayLabel" destination="wWV-kC-h3s" id="FuG-ty-1j2"/>
+                                    <outlet property="descriptionLabel" destination="mRK-lF-2e3" id="rkS-RC-0dz"/>
+                                    <outlet property="monthLabel" destination="1pu-MJ-VvR" id="9iz-PV-ztD"/>
+                                    <outlet property="thumbnail" destination="auF-pt-WIv" id="apB-OT-4jI"/>
+                                    <segue destination="Ent-7z-qR5" kind="push" id="fDj-9Z-wK8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -218,11 +253,11 @@
                             <outlet property="delegate" destination="JsY-8h-AA6" id="u3z-AN-5ZM"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Journal" image="journa" id="Dva-l1-RXG"/>
+                    <navigationItem key="navigationItem" id="jgC-fb-z61"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmq-Nj-20A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="159"/>
+            <point key="canvasLocation" x="1919.2" y="158.77061469265368"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="Ef2-cO-DWw">
@@ -236,7 +271,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="JsY-8h-AA6" kind="relationship" relationship="viewControllers" id="syp-Y4-Irq"/>
+                        <segue destination="LRn-9n-dz3" kind="relationship" relationship="viewControllers" id="syp-Y4-Irq"/>
                         <segue destination="6q8-BM-BCp" kind="relationship" relationship="viewControllers" id="aP0-8Z-lbq"/>
                         <segue destination="lLy-oZ-Oyg" kind="relationship" relationship="viewControllers" id="TIx-4S-fa5"/>
                     </connections>
@@ -248,7 +283,7 @@
         <!--Entry View-->
         <scene sceneID="FPc-Zb-YGw">
             <objects>
-                <viewController id="Ent-7z-qR5" userLabel="Entry View" customClass="NewEntryVC" customModule="mustachio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ent-7z-qR5" userLabel="Entry View" customClass="JournalEntryVC" customModule="mustachio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2sj-62-6G8"/>
                         <viewControllerLayoutGuide type="bottom" id="ed8-Rt-aOq"/>
@@ -258,37 +293,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Nat-rI-YHp">
-                                <rect key="frame" x="0.0" y="-23" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="21" width="375" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Y2t-JV-zcb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month ## - Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nha-Ac-PDb">
-                                <rect key="frame" x="16" y="235" width="208.5" height="30.5"/>
+                                <rect key="frame" x="16" y="279" width="208.5" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                                 <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-2c-SO5">
-                                <rect key="frame" x="16" y="284" width="77" height="24.5"/>
+                                <rect key="frame" x="16" y="328.5" width="77" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk2-rt-u38">
-                                <rect key="frame" x="16" y="335.5" width="118" height="24.5"/>
+                                <rect key="frame" x="16" y="380" width="118" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B56-Sn-MyX">
-                                <rect key="frame" x="16" y="381" width="343" height="205"/>
+                                <rect key="frame" x="16" y="425.5" width="343" height="111.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lgB-lr-jVD">
-                                <rect key="frame" x="101" y="285" width="258" height="24"/>
+                                <rect key="frame" x="101" y="329.5" width="258" height="24"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="PCD-Vi-8ky"/>
@@ -297,15 +332,12 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6B-1Q-Gpd">
-                                <rect key="frame" x="20" y="603" width="334" height="44"/>
+                                <rect key="frame" x="20" y="554" width="334" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="334" id="PYt-cd-eFf"/>
                                     <constraint firstAttribute="height" constant="44" id="xoP-ZB-FRC"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="editEntry"/>
-                                <connections>
-                                    <action selector="saveEntry:" destination="Ent-7z-qR5" eventType="touchUpInside" id="TLe-9d-iot"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-hS-5Zg">
                                 <rect key="frame" x="0.0" y="20" width="375" height="187"/>
@@ -336,16 +368,37 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Entry" image="plus" id="KX7-7U-8CF"/>
+                    <navigationItem key="navigationItem" id="ouU-fQ-Ieh"/>
                     <connections>
-                        <outlet property="dateLabel" destination="Nha-Ac-PDb" id="Sm5-ab-ItF"/>
-                        <outlet property="descriptionTextView" destination="B56-Sn-MyX" id="36w-04-iOY"/>
-                        <outlet property="entryImage" destination="rSk-hS-5Zg" id="VnF-99-H9I"/>
-                        <outlet property="lengthTextView" destination="lgB-lr-jVD" id="8Lp-O8-M8a"/>
+                        <outlet property="dateLabel" destination="Nha-Ac-PDb" id="ekx-OW-4WQ"/>
+                        <outlet property="descriptionTextView" destination="B56-Sn-MyX" id="rZH-if-cCc"/>
+                        <outlet property="editButton" destination="j6B-1Q-Gpd" id="j1K-xo-6xv"/>
+                        <outlet property="entryImage" destination="rSk-hS-5Zg" id="tOd-0l-Jen"/>
+                        <outlet property="lengthTextView" destination="lgB-lr-jVD" id="g5k-Mq-67T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUm-lx-h7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1898" y="159"/>
+            <point key="canvasLocation" x="2836" y="158.77061469265368"/>
+        </scene>
+        <!--Journal-->
+        <scene sceneID="Tfu-If-h9w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LRn-9n-dz3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Journal" image="journa" id="Dva-l1-RXG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2qQ-Nh-Cn9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JsY-8h-AA6" kind="relationship" relationship="rootViewController" id="IJC-jm-VZf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TqA-Pi-rMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="158.77061469265368"/>
         </scene>
     </scenes>
     <resources>

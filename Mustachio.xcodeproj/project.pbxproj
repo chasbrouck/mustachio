@@ -18,8 +18,10 @@
 		F81B24761EB6832800EF2BCE /* JournalTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B24751EB6832800EF2BCE /* JournalTableVC.swift */; };
 		F81B24781EB6834D00EF2BCE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B24771EB6834D00EF2BCE /* UserData.swift */; };
 		F81B247C1EB6839200EF2BCE /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B247B1EB6839200EF2BCE /* JournalEntry.swift */; };
+		F84FCDCD1EC1294300D5A6F4 /* JournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FCDCC1EC1294300D5A6F4 /* JournalCell.swift */; };
 		F87614DC1EB802A400009ED2 /* NewEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87614DB1EB802A400009ED2 /* NewEntryVC.swift */; };
 		F87614DE1EB80AA600009ED2 /* MyFileFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87614DD1EB80AA600009ED2 /* MyFileFunctions.swift */; };
+		F87F9ED61EC11E5D00473A37 /* JournalEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F9ED51EC11E5D00473A37 /* JournalEntryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +38,10 @@
 		F81B24751EB6832800EF2BCE /* JournalTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalTableVC.swift; path = Mustachio/JournalTableVC.swift; sourceTree = SOURCE_ROOT; };
 		F81B24771EB6834D00EF2BCE /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		F81B247B1EB6839200EF2BCE /* JournalEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		F84FCDCC1EC1294300D5A6F4 /* JournalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalCell.swift; path = Mustachio/JournalCell.swift; sourceTree = "<group>"; };
 		F87614DB1EB802A400009ED2 /* NewEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewEntryVC.swift; path = ../NewEntryVC.swift; sourceTree = "<group>"; };
 		F87614DD1EB80AA600009ED2 /* MyFileFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFileFunctions.swift; sourceTree = "<group>"; };
+		F87F9ED51EC11E5D00473A37 /* JournalEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalEntryVC.swift; path = Mustachio/JournalEntryVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		1343FAF91EB67454007BF9EA = {
 			isa = PBXGroup;
 			children = (
+				F84FCDCC1EC1294300D5A6F4 /* JournalCell.swift */,
 				1343FB041EB67454007BF9EA /* mustachio */,
 				1343FB031EB67454007BF9EA /* Products */,
 			);
@@ -106,6 +111,7 @@
 				F87614DB1EB802A400009ED2 /* NewEntryVC.swift */,
 				1343FB071EB67454007BF9EA /* ViewController.swift */,
 				F81B24751EB6832800EF2BCE /* JournalTableVC.swift */,
+				F87F9ED51EC11E5D00473A37 /* JournalEntryVC.swift */,
 				13EA796B1EB7928D009E089C /* TabBarViewController.swift */,
 			);
 			name = VC;
@@ -160,7 +166,7 @@
 				TargetAttributes = {
 					1343FB011EB67454007BF9EA = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 9Z9L4R4J82;
+						DevelopmentTeam = 6SU8YGDKYW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -204,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1343FB081EB67454007BF9EA /* ViewController.swift in Sources */,
+				F87F9ED61EC11E5D00473A37 /* JournalEntryVC.swift in Sources */,
 				1343FB061EB67454007BF9EA /* AppDelegate.swift in Sources */,
+				F84FCDCD1EC1294300D5A6F4 /* JournalCell.swift in Sources */,
 				F81B247C1EB6839200EF2BCE /* JournalEntry.swift in Sources */,
 				F81B24781EB6834D00EF2BCE /* UserData.swift in Sources */,
 				F87614DC1EB802A400009ED2 /* NewEntryVC.swift in Sources */,
@@ -335,7 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9Z9L4R4J82;
+				DEVELOPMENT_TEAM = 6SU8YGDKYW;
 				INFOPLIST_FILE = mustachio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -349,7 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9Z9L4R4J82;
+				DEVELOPMENT_TEAM = 6SU8YGDKYW;
 				INFOPLIST_FILE = mustachio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

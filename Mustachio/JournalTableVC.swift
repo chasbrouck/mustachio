@@ -61,16 +61,23 @@ class JournalTableVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath) as! JournalCell
 
         // Configure the cell...
         if UserData.shared.totalJournalEntries.count > 0{
             let entry = UserData.shared.totalJournalEntries[indexPath.row]
-            let title = entry.journalDate
-            cell.textLabel?.text = title
+            cell.thumbnail.image = entry.journalImage
+            cell.descriptionLabel.text = entry.journalDescription
+            cell.monthLabel.text = entry.month
+            cell.dayLabel.text = entry.day
         }
 
         return cell
+    }
+    
+    //set height of cells
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
  
 
@@ -109,14 +116,23 @@ class JournalTableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let indexPath = tableView.indexPathForSelectedRow{
+            let selectedRow = indexPath.row
+            guard selectedRow < UserData.shared.totalJournalEntries.count else{
+                print("row \(selectedRow) is not in Journal!")
+                return
+            }
+            let detailVC = segue.destination as! JournalEntryVC
+            detailVC.entry = UserData.shared.totalJournalEntries[selectedRow]
+        }
     }
-    */
+    
 
 }

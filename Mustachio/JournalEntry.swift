@@ -15,9 +15,11 @@ class JournalEntry: NSObject, NSCoding{
     private var hairLength:Double //stores hairLength
     private var image:UIImage //stores documentary photograph
     
-    private var day:String
-    private var month:String
-    private var year:String
+    var day:String
+    var month:String
+    var year:String
+    
+    
     
     private var concatenatedDate:String
     

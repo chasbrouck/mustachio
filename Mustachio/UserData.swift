@@ -18,7 +18,6 @@ class UserData{
     static let shared = UserData()
     
     private init(){
-        //add file loading code here
         
     }
     
