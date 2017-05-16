@@ -60,8 +60,13 @@ class JournalEntry: NSObject, NSCoding{
     }
     
     // MARK - Getters and Setters
-    var journalDescription: String?{
-        return entryDescription
+    var journalDescription: String{
+        get{
+            return entryDescription
+        }
+        set(newDescription){
+            entryDescription = newDescription
+        }
     }
     
     var journalHairLength: Double{

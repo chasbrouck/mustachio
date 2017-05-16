@@ -54,7 +54,7 @@ class NewEntryVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBAction func saveEntry(_ sender: Any) {
         
         
-        if lengthTextView.text == nil || descriptionTextView.text == nil || entryImage.image == nil{
+        if lengthTextView.text == "" || descriptionTextView.text == "" || entryImage.image == nil{
             return
         }
         
@@ -62,11 +62,16 @@ class NewEntryVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         UserData.shared.totalJournalEntries.append(newEntry)
         print(UserData.shared.totalJournalEntries.count)
-        print(UserData.shared.totalJournalEntries[0].journalDescription ?? "No Description")
+        print(UserData.shared.totalJournalEntries[0].journalDescription)
         
         reset()
         
         UserData.shared.saveEntries()
+        
+        //get the notification center
+        let nc = NotificationCenter.default
+        
+        nc.post(name: myEntryAddedNotification, object: self, userInfo: nil)
     }
     
     
@@ -77,6 +82,7 @@ class NewEntryVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     func reset(){
         lengthTextView!.text = ""
         descriptionTextView!.text = ""
+        entryImage!.image = nil
     }
     
     //allows the user to open the camera and take pictures

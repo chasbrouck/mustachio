@@ -8,8 +8,11 @@
 
 import UIKit
 
-class JournalTableVC: UITableViewController {
+//notification that lets lets JournalTableVC know when a new entry was added
+let myEntryAddedNotification = NSNotification.Name("myEntryAddedNotification")
 
+class JournalTableVC: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -32,6 +35,12 @@ class JournalTableVC: UITableViewController {
         }else{
             print("could not find allEntries.archive")
         }
+        
+        //get the notification center
+        let nc = NotificationCenter.default
+        
+        //register this object as an observer
+        nc.addObserver(self, selector: #selector(showEntries), name: myEntryAddedNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,25 +90,21 @@ class JournalTableVC: UITableViewController {
     }
  
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            UserData.shared.totalJournalEntries.remove(at: indexPath.row)
+            
+            //Update the tableView
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            UserData.shared.saveEntries()
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
@@ -132,6 +137,12 @@ class JournalTableVC: UITableViewController {
             let detailVC = segue.destination as! JournalEntryVC
             detailVC.entry = UserData.shared.totalJournalEntries[selectedRow]
         }
+    }
+    
+    // MARK: - Notifications
+    func showEntries(notification: NSNotification){
+        //change to Journal Entries tab
+        tabBarController?.selectedIndex = 0
     }
     
 
