@@ -7,9 +7,8 @@
 //
 
 import UIKit
-
+//custom class for the cells in the calendar view
 class CalendarCell: UICollectionViewCell {
     @IBOutlet weak var monthLabel: UILabel!
-    
     @IBOutlet weak var dateLabel: UILabel!
 }

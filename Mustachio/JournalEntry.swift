@@ -19,8 +19,6 @@ class JournalEntry: NSObject, NSCoding{
     var month:String
     var year:String
     
-    
-    
     private var concatenatedDate:String
     
     //constructor

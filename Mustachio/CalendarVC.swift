@@ -12,9 +12,6 @@ private let reuseIdentifier = "Cell"
 
 class CalendarVC: UICollectionViewController {
     
-    
-    var screenSize:CGSize!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,8 +25,6 @@ class CalendarVC: UICollectionViewController {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        
-        screenSize = self.view.frame.size
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,16 +90,10 @@ class CalendarVC: UICollectionViewController {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    //method that resizes cells in the collection/calendar view
+    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width/3, height: 125)
-        
     }
-    /*
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width/3, height: 125)
-    }*/
 
     // MARK: UICollectionViewDelegate
 

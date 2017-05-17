@@ -10,9 +10,9 @@ import UIKit
 
 class JournalEntryVC: UIViewController {
     var entry:JournalEntry!
-    
+    //boolean to control state of entry editing
     var editingEntry = true
-    
+    //hookup the various storyboard elements
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var entryImage: UIImageView!
@@ -47,16 +47,23 @@ class JournalEntryVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK - Helpers
+    //method that handles editing of journal entries
     @IBAction func editEntry(_ sender: Any) {
         
         let button = sender as! UIButton
         
+        //changes button image depending on the state of editing
+        //also sets up user interactivity for the text fields
         if editingEntry{
             descriptionTextView.isEditable = true
             lengthTextView.isEditable = true
             
             lengthTextView.text! = "\(entry.journalHairLength)"
+            
+            //makes it so that only numbers can be entered for the length
+            lengthTextView.keyboardType = UIKeyboardType.phonePad
             
             descriptionTextView.backgroundColor = UIColor.lightGray
             lengthTextView.backgroundColor = UIColor.lightGray
@@ -65,13 +72,16 @@ class JournalEntryVC: UIViewController {
             editingEntry = false
             
         }else{
+            guard let length:Double = Double(lengthTextView.text) else{
+                return
+            }
             descriptionTextView.isEditable = false
             lengthTextView.isEditable = false
             
             descriptionTextView.backgroundColor = UIColor.white
             lengthTextView.backgroundColor = UIColor.white
             
-            entry.journalHairLength = Double(lengthTextView.text)!
+            entry.journalHairLength = length
             entry.journalDescription = descriptionTextView.text!
             
             button.setBackgroundImage(UIImage(named: "editEntry"), for: .normal)

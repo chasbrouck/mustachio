@@ -32,6 +32,9 @@ class NewEntryVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         let screenTap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(screenTap)
         
+        //makes it so the user can only enter numbers for the length
+        lengthTextView.keyboardType = UIKeyboardType.phonePad
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,17 +55,17 @@ class NewEntryVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     // MARK - Storyboard Actions
     @IBAction func saveEntry(_ sender: Any) {
-        
-        
         if lengthTextView.text == "" || descriptionTextView.text == "" || entryImage.image == nil{
             return
         }
         
-        let newEntry = JournalEntry(description: descriptionTextView!.text, hairLength: Double(lengthTextView!.text)!, image: entryImage.image!)
+        guard let length:Double = Double(lengthTextView.text) else{
+            return
+        }
+        
+        let newEntry = JournalEntry(description: descriptionTextView!.text, hairLength: length, image: entryImage.image!)
         
         UserData.shared.totalJournalEntries.append(newEntry)
-        print(UserData.shared.totalJournalEntries.count)
-        print(UserData.shared.totalJournalEntries[0].journalDescription)
         
         reset()
         

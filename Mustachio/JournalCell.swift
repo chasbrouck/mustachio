@@ -9,7 +9,7 @@
 import UIKit
 
 class JournalCell: UITableViewCell {
-    
+    //set up references to storyboard elements
     @IBOutlet weak var thumbnail:UIImageView!
     @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var monthLabel: UILabel!
